@@ -1,0 +1,72 @@
+@FishMarket.API_HostAddress = https://localhost:7241
+
+POST {{FishMarket.API_HostAddress}}/authentication/register
+Content-Type: application/json
+
+{
+  "Email": "test@yopmail.com",
+  "Password":"123456"
+}
+
+###
+
+PATCH {{FishMarket.API_HostAddress}}/authentication/otp
+Content-Type: application/json
+
+{
+  "Email": "test@yopmail.com",
+  "Password":"123456",
+  "Otp": "221374"
+}
+
+###
+
+POST {{FishMarket.API_HostAddress}}/authentication/login
+Content-Type: application/json
+
+{
+  "Email": "test@yopmail.com",
+  "Password": "123456"
+}
+
+###
+
+GET {{FishMarket.API_HostAddress}}/authentication/refresh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiVHJ1ZSIsIm5iZiI6MTcxMDg1NjczMCwiZXhwIjoxNzIzODE2NzMwLCJpYXQiOjE3MTA4NTY3MzB9.Tbp_zZbA47j1zYCTVwOvhLv3ioS-LK07lrRw17i_nPs
+
+###
+
+GET {{FishMarket.API_HostAddress}}/fish?id=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiRmFsc2UiLCJuYmYiOjE3MTA4NTY3MzAsImV4cCI6MTcxMTA3MjczMCwiaWF0IjoxNzEwODU2NzMwfQ.S4Rt1QjsmemzO41yFjjVUyCLq6IuZWSBSrBjC6cXK0o
+###
+
+POST {{FishMarket.API_HostAddress}}/fish
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiRmFsc2UiLCJuYmYiOjE3MTA4NTY3MzAsImV4cCI6MTcxMTA3MjczMCwiaWF0IjoxNzEwODU2NzMwfQ.S4Rt1QjsmemzO41yFjjVUyCLq6IuZWSBSrBjC6cXK0o
+
+{
+  "Name": "Lüfer",
+  "Price": 5
+}
+
+###
+
+PATCH {{FishMarket.API_HostAddress}}/fish?id=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiRmFsc2UiLCJuYmYiOjE3MTA4NTY3MzAsImV4cCI6MTcxMTA3MjczMCwiaWF0IjoxNzEwODU2NzMwfQ.S4Rt1QjsmemzO41yFjjVUyCLq6IuZWSBSrBjC6cXK0o
+
+###
+
+DELETE {{FishMarket.API_HostAddress}}/fish?id=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiRmFsc2UiLCJuYmYiOjE3MTA4NTY3MzAsImV4cCI6MTcxMTA3MjczMCwiaWF0IjoxNzEwODU2NzMwfQ.S4Rt1QjsmemzO41yFjjVUyCLq6IuZWSBSrBjC6cXK0o
+
+###
+
+GET {{FishMarket.API_HostAddress}}/fish/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiRmFsc2UiLCJuYmYiOjE3MTA4NTY3MzAsImV4cCI6MTcxMTA3MjczMCwiaWF0IjoxNzEwODU2NzMwfQ.S4Rt1QjsmemzO41yFjjVUyCLq6IuZWSBSrBjC6cXK0o
+
+###
+
+GET {{FishMarket.API_HostAddress}}/fish/recent
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAeW9wbWFpbC5jb20iLCJhdXRobWV0aG9kIjoiRmFsc2UiLCJuYmYiOjE3MTA4NTY3MzAsImV4cCI6MTcxMTA3MjczMCwiaWF0IjoxNzEwODU2NzMwfQ.S4Rt1QjsmemzO41yFjjVUyCLq6IuZWSBSrBjC6cXK0o
+
+###
