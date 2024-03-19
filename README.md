@@ -6,7 +6,8 @@
 
 ## Setup
 * Install Microsoft SQL Server
-* Install Visual Studio 2022 (.Net 8 SDK)
+* Install Visual Studio 2022
+* .Net 8 SDK
 
 <br>
 
