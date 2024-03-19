@@ -5,13 +5,14 @@
 <br>
 
 ## Setup
-* Install Microsoft SQL Server Management Studio
-* Install Visual Studio 2022
+* Install Microsoft SQL Server
+* Install Visual Studio 2022 (.Net 8 SDK)
 
 <br>
 
 ## Steps
 * **git clone https://github.com/frkn2076/FishMarket**
+* **Update connection string on appsettings to replace default user password or set your password on connection string as your default user password on database, please [see](https://github.com/frkn2076/FishMarket/blob/f4576ecf93e7071a24c4d239754b4acb8399e7e4/FishMarket.Api/appsettings.Development.json#L18C73-L18C83)**
 * **Email Sender Configs:**
   * **Update appsettings to add sender email credentials.**
   * **Turn the "Allow less secure apps" on:**
